@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://4rq2texlfh0y"]
+
+[ext_resource type="Texture2D" uid="uid://6dc40yu3drp8" path="res://sprite/ichigo parado.png" id="1_6mdyt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0opb"]
+atlas = ExtResource("1_6mdyt")
+region = Rect2(0, 0, 51, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0rq2"]
+atlas = ExtResource("1_6mdyt")
+region = Rect2(73, 0, 50, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haeww"]
+atlas = ExtResource("1_6mdyt")
+region = Rect2(141, 0, 54, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_753fr"]
+atlas = ExtResource("1_6mdyt")
+region = Rect2(207, 0, 59, 57)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wnkw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0opb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0rq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haeww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_753fr")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D" unique_id=738450078]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1685701980]
+scale = Vector2(1.0454545, 1)
+sprite_frames = SubResource("SpriteFrames_6wnkw")
+animation = &"idle"
+frame = 1
+frame_progress = 0.27981463
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=572517357]
